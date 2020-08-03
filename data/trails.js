@@ -28,6 +28,24 @@ const readTrails = () => {
     return iou;
 }
 
+// CREATE a trail
+const createTrail = (trail) => {
+    const iou = new Promise((resolve, reject) => {
+        MongoClient.connect(url, options, (err, client) => {
+            assert.equal(err, null);
+            const db = client.db(db_name);
+            const collection = db.collection(col_name);
+            collection.insertOne(trail, (err, result) => {
+                assert.equal(err, null);
+                resolve(result.ops);
+                client.close();
+            });
+        });
+    });
+    return iou;
+}
+
 module.exports = {
-    readTrails
+    readTrails,
+    createTrail
 }
