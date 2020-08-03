@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Angels Landing Trail",
+        "length": 5,
+        "location": "Zion National Park",
+        "reviews": ["Good", "Warm"]
+    },
+    {
+        "name": "Lake Blanche Trail",
+        "length": 6.9,
+        "location": "Twin Peaks Wilderness",
+        "reviews": ["Cool lake"]
+    },
+    {
+        "name": "Delicate Arch Trail",
+        "length": 3,
+        "location": "Arches National Park",
+        "reviews": ["Most recognizable arch"]
+    },
+    {
+        "name": "The Zion Narrows Riverside Walk",
+        "length": 1.9,
+        "location": "Zion National Park",
+        "reviews": ["Pretty river"]
+    },
+    {
+        "name": "Navajo Loop and Queen's Garden Trail",
+        "length": 2.9,
+        "location": "Bryce Canyon National Park",
+        "reviews": ["Not too difficult"]
+    }
+]
