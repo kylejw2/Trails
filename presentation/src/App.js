@@ -1,10 +1,16 @@
 import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Trails from './components/trails';
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Router>
+      <h1>Must-Hike Trails in Utah</h1>
+      <Route>
+        <Trails />
+      </Route>
+    </Router>
   );
 }
 

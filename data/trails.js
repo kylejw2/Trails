@@ -14,7 +14,6 @@ const options = {
 // READ trails
 const readTrails = () => {
     const iou = new Promise((resolve, reject) => {
-        console.log(url, db_name, col_name);
         MongoClient.connect(url, options, (err, client) => {
             assert.equal(err, null);
             const db = client.db(db_name);
