@@ -11,6 +11,7 @@ router.get('/', async function(req, res, next) {
     res.send(data);
 });
 
+// POST a trail
 router.post('/', async function(req, res, next) {
     const body = req.body;
     const data = await createTrail(body);
