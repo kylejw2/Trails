@@ -3,6 +3,7 @@ var router = express.Router();
 const {
     readTrails,
     createTrail,
+    upsertTrail,
     deleteTrail
 } = require('../../data/trails');
 
@@ -16,6 +17,14 @@ router.get('/', async function(req, res, next) {
 router.post('/', async function(req, res, next) {
     const body = req.body;
     const data = await createTrail(body);
+    res.send(data);
+});
+
+// PUT a trail
+router.put('/:id', async function(req, res, next) {
+    const body = req.body;
+    const id = req.params.id;
+    const data = await upsertTrail(id, body);
     res.send(data);
 })
 

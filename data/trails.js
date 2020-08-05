@@ -53,14 +53,13 @@ const upsertTrail = (id, trail) => {
             const db = client.db(db_name);
             const collection = db.collection(col_name);
             collection.findOneAndUpdate({_id: new ObjectId(id)}, 
-                trail, 
+                {$set: trail}, 
                 {
-                    new: true,
                     upsert: true
                 },
                 (err, result) => {
                     assert.equal(err, null);
-                    resolve(result); // Line 58 should return the newly updated/created object
+                    resolve(result.value);
                     client.close;
                 });
         })
