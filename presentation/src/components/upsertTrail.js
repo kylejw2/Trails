@@ -9,7 +9,7 @@ export default class UpsertTrail extends React.Component {
             location: this.props.location,
             reviews: this.props.reviews
         }
-        this.url = `${process.env.REACT_APP_API_URL}/api/trails/${this.props.id}`;
+        this.url = `${process.env.REACT_APP_API_URL}/trails/${this.props.id}`;
         this.handleChange = this.handleChange.bind(this);
         this.handleClick = this.handleClick.bind(this);
         this.handleClickAddReview = this.handleClickAddReview.bind(this);

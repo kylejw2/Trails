@@ -10,7 +10,7 @@ export default class AddTrail extends React.Component {
             location: '',
             reviews: ['']
         }
-        this.url = `${process.env.REACT_APP_API_URL}/api/trails`;
+        this.url = `${process.env.REACT_APP_API_URL}/trails`;
         this.handleChangeCreate = this.handleChangeCreate.bind(this);
         this.handleClickCreate = this.handleClickCreate.bind(this);
         this.handleClickAddReview = this.handleClickAddReview.bind(this);

@@ -9,7 +9,7 @@ export default class Trails extends React.Component {
             trails: []
         }
         this.refresh = this.refresh.bind(this);
-        this.url = `${process.env.REACT_APP_API_URL}/api/trails`;
+        this.url = `${process.env.REACT_APP_API_URL}/trails`;
     }
 
     componentDidMount() {

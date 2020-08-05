@@ -7,7 +7,7 @@ const Trail = (props) => {
         const options = {
             method: 'DELETE'
         };
-        await fetch(`${process.env.REACT_APP_API_URL}/api/trails/${props.id}`, options);
+        await fetch(`${process.env.REACT_APP_API_URL}/trails/${props.id}`, options);
         props.refresh();
     }
     const toggleMods = () => {
