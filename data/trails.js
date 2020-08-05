@@ -45,6 +45,29 @@ const createTrail = (trail) => {
     return iou;
 }
 
+// UPSERT a trail
+const upsertTrail = (id, trail) => {
+    const iou = new Promise((resolve, reject) => {
+        MongoClient.connect(url, options, (err, client) => {
+            assert.equal(err, null);
+            const db = client.db(db_name);
+            const collection = db.collection(col_name);
+            collection.findOneAndUpdate({_id: new ObjectId(id)}, 
+                trail, 
+                {
+                    new: true,
+                    upsert: true
+                },
+                (err, result) => {
+                    assert.equal(err, null);
+                    resolve(result); // Line 58 should return the newly updated/created object
+                    client.close;
+                });
+        })
+    });
+    return iou;
+}
+
 // DELETE a trail
 const deleteTrail = (id) => {
     const iou = new Promise((resolve, reject) => {
@@ -65,5 +88,6 @@ const deleteTrail = (id) => {
 module.exports = {
     readTrails,
     createTrail,
+    upsertTrail,
     deleteTrail
 }
