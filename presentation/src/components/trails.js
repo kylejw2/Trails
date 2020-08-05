@@ -27,6 +27,9 @@ export default class Trails extends React.Component {
             key={trail._id}
             id={trail._id}
             name={trail.name}
+            length={trail.length}
+            location={trail.location}
+            reviews={trail.reviews}
             refresh={this.refresh}
         />);
         return (
