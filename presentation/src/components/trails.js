@@ -25,7 +25,9 @@ export default class Trails extends React.Component {
     render() {
         const trails = this.state.trails.map(trail => <Trail 
             key={trail._id}
+            id={trail._id}
             name={trail.name}
+            refresh={this.refresh}
         />);
         return (
             <>
