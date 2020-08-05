@@ -2,16 +2,18 @@
   text-align: center;
 }
 
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-.add-trail {
+.add-trail, ul {
   display: flex;
   flex-direction: column;
   width: 400px;
   margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  padding-top: 10px;
+  align-items: flex-start;
 }
 
 .review {
